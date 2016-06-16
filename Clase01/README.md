@@ -1,4 +1,4 @@
-# Las bases
+## Las bases
 
 En esta primera sesión, conocerás lo necesario para escribir código en el lenguaje
 de programación Elm.
@@ -23,13 +23,24 @@ La pregunta es de niños. Afortunadamente, la comunidad de Haskell no se burló
 de mi por dicha pregunta, todo lo contrario, me ayudó a comprederla. Y ahora yo haré lo mismo,
 pero describiendo la firma de una función escrita en Elm (que es muy similar).
 
-
-Ok, la función es la siguiente:
+Describamos los componentes de la siguiente función:
 
 ```
 myAddFunction : Int -> Int -> Int
 myAddFunction a b = a + b
 ```
+- `myAddFunction` es el nombre de la función
+- `:` (dos puntos) son colocados después del nombre de la función para definir su tipo.
+- `Int -> Int -> Int` esta notación indica el tipo de la función. Y lo que indica es que
+La función tomará 2 números enteros y retornará otro entero. Describiré más sobre
+esta notación en otro capítulo, por ahora contentémonos con esta definición.
+Si por ejemplo, tuvieramos una función `f : Int -> Int` esto indicaría que la función `f`
+toma un entero y retorna otro entero.
+- `myAddFunction a b` es la definición de la función. Primero escribirmos el nombre de la
+función y a continuación una notación para sus dos parámetros (en este caso `a` y `b`).
+- `= a + b` lo que está a continuación del símbolo `=` (igual) es la implementación de la función.
+En este caso, simplemente indica que sumará los parámetros `a` y `b`.
 
+¿Fácil no? Bueno, estoy omitiendo algunos aspectos importantes, que los trataré más adelante.
 
 [elm-page][http://elm-lang.org/]
