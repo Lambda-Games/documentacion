@@ -19,13 +19,13 @@ de Haskell fue la siguiente:
 [camm]: myAddFunction :: Integer -> Integer -> Integer
 ```
 
-La pregunta es de niños. Afortunadamente, la comunidad de Haskell no se burló
-de mi por dicha pregunta, todo lo contrario, me ayudó a comprederla. Y ahora yo haré lo mismo,
-pero describiendo la firma de una función escrita en Elm (que es muy similar).
+La pregunta es para novatos. Afortunadamente, la comunidad de Haskell no se burló
+de mi pregunta, todo lo contrario, me ayudó a comprederla. Y ahora yo intentaré hacer
+lo mismo, pero describiendo la firma de una función escrita en Elm (que es muy similar).
 
 Describamos los componentes de la siguiente función:
 
-```
+```elm
 myAddFunction : Int -> Int -> Int
 myAddFunction a b = a + b
 ```
