@@ -43,4 +43,4 @@ En este caso, simplemente indica que sumará los parámetros `a` y `b`.
 
 ¿Fácil no? Bueno, estoy omitiendo algunos aspectos importantes, que los trataré más adelante.
 
-[elm-page][http://elm-lang.org/]
+[elm-page]: http://elm-lang.org/
