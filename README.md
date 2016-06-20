@@ -7,3 +7,26 @@ de programación Elm.
 - [Capítulo 1](Clase01.md)
 
 - [License](LICENSE.md)
+
+# TODO:
+- Capítulo 1:
+  - Instalación
+  - Herramientas
+  - Firma de una función
+  - Funciones de primer orden
+  - Funciones anónimas
+  - Poliformismo paramétrico
+- Capítulo 2:
+  - Tipos de datos
+  - Records
+  - Tipos de datos algebraicos
+  - Pattern matching
+  - Tipos de datos recursivos
+- Capítulo 3:
+  - Curryng
+  - Aplicación parcial
+- Capítulo 4:
+  - Virtual DOM
+  - La arquitectura de Elm
+- Capítulo 5:
+  - Efectos
