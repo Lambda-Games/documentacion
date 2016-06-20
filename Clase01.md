@@ -5,7 +5,24 @@ de programación Elm.
 
 # ¿Elm?
 [Elm][elm-page] es un lenguaje de programación funcional que compila a HTML 5
-(HTML, JavaScript y CSS).
+(HTML, JavaScript y CSS). Fue diseñado por [Evan Czaplicki][evan-czaplicki]
+
+# Instalación
+Elm puede ser instalado en cualquier plataforma, solo debes de seguir la [guía de instalación][elm-install]
+de elm. La forma más sencilla de hacerlo es utilizando [npm][install-npm]:
+
+```
+$ npm install -g elm
+```
+
+# Herramientas
+Una vez instalado el paquete de elm, tendrás acceso a las siguientes herramientas:
+
+- elm
+- elm-package
+- elm-repl
+- elm-reactor
+- elm-make
 
 # Firma de una función
 La *firma de la función*, es uno de los términos más utilizados cuando escribes
@@ -43,4 +60,10 @@ En este caso, simplemente indica que sumará los parámetros `a` y `b`.
 
 ¿Fácil no? Bueno, estoy omitiendo algunos aspectos importantes, que los trataré más adelante.
 
+# Ejercicios
+
+
 [elm-page]: http://elm-lang.org/
+[evan-czaplicki]: https://twitter.com/czaplic
+[elm-install]: http://elm-lang.org/install
+[install-npm]: http://blog.npmjs.org/post/85484771375/how-to-install-npm
