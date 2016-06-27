@@ -4,8 +4,9 @@ En esta primera sesión, conocerás lo necesario para escribir código en el len
 de programación Elm.
 
 # ¿Elm?
-[Elm][elm-page] es un lenguaje de programación funcional que compila a HTML 5
-(HTML, JavaScript y CSS). Fue diseñado por [Evan Czaplicki][evan-czaplicki]
+[Elm][elm-page] es un lenguaje de programación funcional fuertemente tipado que compila a HTML 5
+(HTML, JavaScript y CSS). Fue diseñado por [Evan Czaplicki][evan-czaplicki] y
+lanzado por primera vez en el año 2012.
 
 # Instalación
 Elm puede ser instalado en cualquier plataforma, solo debes de seguir la [guía de instalación][elm-install]
@@ -18,11 +19,12 @@ $ npm install -g elm
 # Herramientas
 Una vez instalado el paquete de elm, tendrás acceso a las siguientes herramientas:
 
-- *elm*
-- *elm-package*
-- *elm-repl*
-- *elm-reactor*
-- *elm-make*
+- *elm* - Conjunto de herramientas para trabajar con Elm. Básicamente las que
+están descritas a continuación:
+- *elm-package* - Gestor de paquetes de Elm.
+- *elm-repl* - [Read Eval Print Loop][repl] para Elm.
+- *elm-reactor* - Servidor HTTP para explorar un proyecto de Elm.
+- *elm-make* - Compila el código de elm en código de HTML5.
 
 # Firma de una función
 La *firma de la función*, es un término muy común cuando escribes
@@ -60,7 +62,54 @@ el nombre de la función y a continuación un nombre para sus dos parámetros (e
 - `= a + b` lo que está a continuación del símbolo `=` (igual) es la implementación de la función.
 En este caso, simplemente indica que sumará los parámetros `a` y `b`.
 
-¿Fácil no? Bueno, estoy omitiendo algunos aspectos importantes, que los trataré más adelante.
+Antes de continuar con el siguiente tema, cuál sería la firma de las siguientes
+funciones:
+
+```elm
+> addTwo a = a + 2
+> operations a b c d = a + b * c / d
+> concat str1 str2 = str1 ++ str2 {-- (++) se utiliza para concatenar dos cadenas de caracteres --}
+```
+
+Ahora te mostraré la función `map` que tiene la siguiente firma:
+`(a -> b) -> List a -> List b` Intenta adivinar qué indica su firma.
+Esta función indica que `map` toma una función del tipo
+`a -> b` (es decir, una función que toma un valor `a` y retorna un valor `b`)
+, una lista de tipo `a` y retorna una lista de tipo `b`.
+
+¿Fácil no? Bueno, estoy omitiendo algunos aspectos importantes, que los trataré más adelante,
+pero no te preocupes no será nada complicado. :)
+
+# Funciones de primera clase
+Una función de primera clase es una función que es tratada como un [ciudadano de
+primera clase][first-class-citizen], es decir, que una función puede ser tratada
+como un valor, lo que implica lo siguiente:
+- Una función puede asignarse a un identificador. Por ejemplo, asignar la función
+`map` a `myMap`.
+
+```elm
+myMap : (a -> b) -> List a -> List b
+myMap f list = List.map f list
+```
+- Una función puede ser pasada como un argumento. Por ejemplo, la función
+`addTwo a = a + 2` puede ser pasada como parámetro a la función `myMap` para
+que sea aplicada a toda la lista `[1,2,3,4,5]`.
+```elm
+> myMap addTwo [1,2,3,4,5]
+```
+
+- Una función puede ser devuelta por otra función. Por ejemplo, la función
+`myMapAddTwo` devolverá una función que recibe una lista del tipo `Int` y
+retorna otra lista de `Int`.
+```elm
+myMapAddTwo : List Int -> List Int
+myMapAddTwo = myMap addTwo
+```
+
+La función es más especializada (a diferencia de `map`), debido al poder de la
+inferencia de tipos de Elm.
+
+# Funciones de orden superior
 
 # Ejercicios
 
@@ -69,3 +118,5 @@ En este caso, simplemente indica que sumará los parámetros `a` y `b`.
 [evan-czaplicki]: https://twitter.com/czaplic
 [elm-install]: http://elm-lang.org/install
 [install-npm]: http://blog.npmjs.org/post/85484771375/how-to-install-npm
+[repl]: https://en.wikipedia.org/wiki/Read-eval-print_loop
+[first-class-citizen]: https://en.wikipedia.org/wiki/First-class_citizen

@@ -10,10 +10,11 @@ de programación Elm.
 
 # TODO:
 - Capítulo 1:
-  - Instalación
-  - Herramientas
-  - Firma de una función
-  - Funciones de primer orden
+  - ~~Instalación~~
+  - ~~Herramientas~~
+  - ~~Firma de una función~~
+  - ~~Funciones de primera clase~~
+  - Funciones de orden superior
   - Funciones anónimas
   - Poliformismo paramétrico
 - Capítulo 2:
