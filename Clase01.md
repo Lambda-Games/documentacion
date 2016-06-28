@@ -100,7 +100,8 @@ que sea aplicada a toda la lista `[1,2,3,4,5]`.
 
 - Una función puede ser devuelta por otra función. Por ejemplo, la función
 `myMapAddTwo` devolverá una función que recibe una lista del tipo `Int` y
-retorna otra lista de `Int`.
+retorna otra lista de `Int` (volveré a mencionar esto cuando describa lo que
+es el Curryng).
 ```elm
 myMapAddTwo : List Int -> List Int
 myMapAddTwo = myMap addTwo
@@ -110,6 +111,21 @@ La función es más especializada (a diferencia de `map`), debido al poder de la
 inferencia de tipos de Elm.
 
 # Funciones de orden superior
+Una función de orden superior es una función que cumple con almenos una de las
+siguientes características:
+
+- Toma una o más funciones como argumentos.
+- Retorna una función como resultado.
+
+Un ejemplo que describe estas dos características es la función `applyFandG`:
+
+```elm
+applyFandG : (a -> a) -> (a -> a) -> a -> a
+applyFandG f g x = f (g x)
+```
+
+en el ejemplo se puede observar que la función `applyFandG` toma como argumento
+dos funciones `f` y `g` y los aplica a un valor `x`.
 
 # Ejercicios
 

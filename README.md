@@ -13,9 +13,9 @@ de programación Elm.
   - ~~Instalación~~
   - ~~Herramientas~~
   - ~~Firma de una función~~
-  - ~~Funciones de primera clase~~
-  - Funciones de orden superior
   - Funciones anónimas
+  - ~~Funciones de primera clase~~
+  - ~~Funciones de orden superior~~
   - Poliformismo paramétrico
 - Capítulo 2:
   - Tipos de datos
